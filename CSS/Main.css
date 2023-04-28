@@ -95,13 +95,18 @@ section[id]:not(:first-of-type)::before {
 
 /* <HEADER> */
 header {
-    /* background-color: #ddd; test */
     margin: auto;
+}
+
+header:not(section header, header *) {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #2c475522;
 }
 
 header .container {
     padding: 15px;
-    /* background: #aaa; test */
     display: flex;
     justify-content: space-between;
     align-items: center;
